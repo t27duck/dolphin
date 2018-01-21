@@ -58,9 +58,9 @@ void NWC24Config::ResetConfig()
     File::Delete(m_path);
 
   constexpr const char* urls[5] = {
-      "https://amw.wc24.wii.com/cgi-bin/account.cgi", "http://rcw.wc24.wii.com/cgi-bin/check.cgi",
-      "http://mtw.wc24.wii.com/cgi-bin/receive.cgi",  "http://mtw.wc24.wii.com/cgi-bin/delete.cgi",
-      "http://mtw.wc24.wii.com/cgi-bin/send.cgi",
+      "https://amw.wc24.wii.com/cgi-bin/account.cgi", "http://riiconnect24.net/cgi-bin/check.cgi",
+      "http://riiconnect24.net/cgi-bin/receive.cgi",  "http://riiconnect24.net/cgi-bin/delete.cgi",
+      "http://riiconnect24.net/cgi-bin/send.cgi",
   };
 
   memset(&m_data, 0, sizeof(m_data));
@@ -69,7 +69,7 @@ void NWC24Config::ResetConfig()
   SetUnk(8);
   SetCreationStage(NWC24_IDCS_INITIAL);
   SetEnableBooting(0);
-  SetEmail("@wii.com");
+  SetEmail("@rc24.xyz");
 
   for (int i = 0; i < URL_COUNT; ++i)
   {
